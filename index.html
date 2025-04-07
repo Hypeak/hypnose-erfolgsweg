@@ -229,29 +229,19 @@
                 <p><i class="fas fa-clock"></i> Mo-Fr: 9:00-18:00 Uhr</p>
                 <p><i class="fas fa-phone"></i> +41 44 520 93 79</p>
             </div>
-            <p> <a href=https://janmion.ch>https://janmion.ch</a>
+            <p><a href="https://janmion.ch">https://janmion.ch</a></p>
         </div>
+        
+        <!-- Replace the exposed map implementation with an iframe solution -->
         <div class="map-container" style="height: 400px; width: 100%;">
-            <gmpx-api-loader key="AIzaSyChwj3xnjRFhG7Mpu-uTpxGxMibe2gpDRg" solution-channel="GMP_QB_locatorplus_v11_cABD"></gmpx-api-loader>
-            <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+            <iframe src="https://storage.googleapis.com/maps-solutions-3pjovkl6hk/locator-plus/o074/locator-plus.html" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    loading="lazy" 
+                    title="Mion Hypnose Standorte">
+            </iframe>
         </div>
-        <script>
-            const CONFIGURATION = {
-                "locations": [
-                    {"title":"Mion Hypnose Zürich Enge","address1":"Breitingerstrasse 21","address2":"Zürich, Switzerland","coords":{"lat":47.3622134,"lng":8.5329319},"placeId":"ChIJF2aa__sJkEcRyBLuIK-D0J4"},
-                    {"title":"Mion Hypnose Zürich Hottingen","address1":"Ilgenstrasse 4","address2":"Zürich, Switzerland","coords":{"lat":47.3700328,"lng":8.5583121},"placeId":"ChIJxx6HLQyhmkcR2K_tFPgkjAw"},
-                    {"title":"Mion Hypnose Schlieren","address1":"Badenerstrasse 1","address2":"Schlieren, Switzerland","coords":{"lat":47.397171,"lng":8.4474676},"placeId":"ChIJyTPRWicNkEcRvK8-A8Pqi_o"}
-                ],
-                "mapOptions": {"center":{"lat":47.3700328,"lng":8.5583121},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":12,"zoomControl":true,"maxZoom":17},
-                "mapsApiKey": "AIzaSyChwj3xnjRFhG7Mpu-uTpxGxMibe2gpDRg",
-                "capabilities": {"input":true,"autocomplete":true,"directions":false,"distanceMatrix":true,"details":false,"actions":false}
-            };
-            document.addEventListener('DOMContentLoaded', async () => {
-                await customElements.whenDefined('gmpx-store-locator');
-                const locator = document.querySelector('gmpx-store-locator');
-                locator.configureFromQuickBuilder(CONFIGURATION);
-            });
-        </script>
     </div>
 </section>
 
